@@ -81,6 +81,10 @@
 .choice .h_image {
   padding: 10px;
 }
+#logo {
+  color: #fff;
+  filter: drop-shadow(6px 0 2px rgba(0,0,0,0.2));
+}
 #search {
   text-align: center;
   width: 500px;

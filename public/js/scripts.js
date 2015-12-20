@@ -14,11 +14,11 @@ function buttonClick(e) {
 
 
 
-$(document).ready(function(){
-    $("header").click(function(){
-        $(this).slideUp();
-    });
-});
+//$(document).ready(function(){
+//    $("header").click(function(){
+//        $(this).slideUp();
+//    });
+//});
 
 $(document).ready(function(){
     $(".contact-btn").click(function(e){
@@ -38,15 +38,15 @@ $(document).ready(function(){
 
 
 
-$(function(){
- $('#search').on('keyup', function(e){
-   if(e.keyCode === 13) {
-     var parameters = { search: $(this).val() };
-       $.get( '/searching',parameters, function(data) {
-        $('#whatevr').html(data);
-     });
-    };
- });
-});
+//$(function(){
+// $('#search').on('keyup', function(e){
+//   if(e.keyCode === 13) {
+//     var parameters = { search: $(this).val() };
+//       $.get( '/searching',parameters, function(data) {
+//        $('#whatevr').html(data);
+//     });
+//    };
+// });
+//});
 
 
