@@ -1,6 +1,6 @@
 var express = require('express');
 var request = require('request');
-var wikipedia = require('wikipedia-js');
+//var wikipedia = require('wikipedia-js');
 var router = express.Router();
 
 
