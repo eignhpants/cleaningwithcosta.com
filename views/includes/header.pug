@@ -1,0 +1,28 @@
+header
+  .container
+    .row
+      .message.col-md-7.col-md-offset-2
+        //img#logo(src="images/Costas-Cleaning.svg", alt="Costa's Cleaning")
+        include ../../public/images/Costas-Cleaning.svg
+        h1 Costa's Cleaning
+        h2 Residential & Commercial Cleaning
+    .row
+      .message.col-md-7.col-md-offset-2
+        block mail-phone
+  .container
+    //+choice('Residential')
+    //+choice('Commercial')
+//.container
+  .jumbotron
+    h1 We clean your house or whatever
+.container
+  .row
+    block bullets
+
+.container
+  .row
+    .contact.col-md-12
+      block contact
+  .row
+    .main-content.col-md-12
+      block content

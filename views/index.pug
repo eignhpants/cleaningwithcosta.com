@@ -1,6 +1,7 @@
-include mixins/body-mixins
 
-extend layout
+extends layout
+
+include mixins/body-mixins
 
 
 block mail-phone
@@ -10,7 +11,6 @@ block mail-phone
   a(href="mailto:kelly@costascleaning.com").contact-btn.btn.btn-default
     span.glyphicon.glyphicon-envelope
     |  kc@cleaningwithcosta.com
-
 
 block content
   h2 Hello, we are Kelly & Cinthia
@@ -24,17 +24,6 @@ block contact
       | Call today for a free estimate
       a(href="tel:781-781-8050").number.estimate-btn.btn.btn-default
        | 857.251.5190
-
-block references
-  h2.references
-    | References
-  blockquote
-    p
-      | Kelly and the gang do a really super job team!
-  blockquote
-    p
-      | Additional generic quote from somebody
-
 
 block bullets
   +bullet ("Residential")

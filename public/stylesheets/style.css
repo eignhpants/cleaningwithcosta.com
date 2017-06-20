@@ -7,7 +7,6 @@
 .navbar {
   font-family: 'Quicksand';
   margin-bottom: 0;
-  -webkit-border-radius: 0;
   border-radius: 0;
   border: none;
 }
@@ -48,7 +47,6 @@
   font-size: 3vw;
   background-color: #4998f2;
   color: #faf9f0;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   padding: 8px;
   text-align: center;
@@ -65,7 +63,6 @@
   main-color: #4998f2;
   color: #4998f2;
   padding: 5px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .bullet {
@@ -90,7 +87,6 @@
   width: 500px;
   height: 70px;
   font-size: 3.5em;
-  -webkit-border-radius: 8px;
   border-radius: 8px;
 }
 html {
@@ -163,7 +159,6 @@ header .message a {
   float: left;
 }
 .sidebar .widget {
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #ccc;
   margin-left: 20px;
@@ -176,7 +171,6 @@ header .message a {
   margin: 13px 10px 4px;
   padding-bottom: 10px;
   border-bottom: 1px dotted #ddd;
-  -webkit-border-radius: 2px 2px 0px 0px;
   border-radius: 2px 2px 0px 0px;
   margin-bottom: 10px;
 }
@@ -187,6 +181,10 @@ header .message a {
 }
 p {
   line-height: 1.8;
+}
+.a404 {
+  font-size: 8em;
+a
 }
 footer {
   background-color: #424242;
