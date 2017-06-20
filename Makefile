@@ -28,10 +28,6 @@ clean:
 build-npm:
 	browserify --debug -t jadeify views/ui.js -o public/js/include.js
 
-copy:
-	-cp node_modules/bootstrap/dist/css/bootstrap.css public/stylesheets/bootstrap.css
-	-cp node_modules/bootstrap/fonts/* public/fonts/
-
 .PHONY: run build
 
 
@@ -40,28 +36,24 @@ copy:
 #
 
 tag-docker:
-	docker build --no-cache -t ${IMAGE} .
+	docker build -t ${IMAGE} .
 	docker tag ${IMAGE}:latest ${IMAGE}:stable
 	docker push ${IMAGE}:stable
 
 build-docker:
-	docker build --no-cache -t ${NAME} .
+	docker build -t ${NAME} .
 
-run-docker:
-	-docker kill ${NAME}
-
-	docker run -u app\
+run-docker: clean-docker
+	docker run -d -u app\
 		-p 3334:3334\
 		-m "300M" --memory-swap "1G"\
 		--name ${NAME} ${NAME}
 
+clean-docker:
+	-docker kill ${NAME}
+	-docker rm ${NAME}
 
-
-dist-docker: clean
-	#envsubst < ${CURDIR}/cost-dashboard-deployment/prod.config.py > ${CURDIR}/config.py
-	docker build --no-cache -f Dockerfile.build -t build-container .
-	docker run -v  "${CURDIR}/public/dist:/build/public/dist" build-container
-
-dist:
-	stylus -u nib client/styles/style.styl -o ${CURDIR}/costdashboard/static/dist/style.css
-	browserify --debug client/app/dashboard.js -t babelify -t pugify -o ${CURDIR}/costdashboard/static/dist/csi-dashboard.js
+# dist-docker: clean
+# 	#envsubst < ${CURDIR}/cost-dashboard-deployment/prod.config.py > ${CURDIR}/config.py
+# 	docker build --no-cache -f Dockerfile.build -t build-container .
+# 	docker run -v  "${CURDIR}/public/dist:/build/public/dist" build-container

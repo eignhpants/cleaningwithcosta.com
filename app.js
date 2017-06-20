@@ -15,7 +15,7 @@ app.locals.config = config;
 app.use('/', route_handler);
 
 console.log('Listening on Not 3334');
-app.listen(3333);
+app.listen(config.port);
 
 
 
