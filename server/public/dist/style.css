@@ -1,14 +1,14 @@
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,300|Quicksand");
 @import url("https://fonts.googleapis.com/css?family=Lato:900|Open+Sans:400,300,300italic");
-/*
- * Store the main color and
- * background color as variables
- */
 .navbar {
   font-family: 'Quicksand';
   margin-bottom: 0;
   border-radius: 0;
   border: none;
+}
+.navbar .navbar-nav li:hover {
+  background-color: #fff;
+  color: #fff;
 }
 .navbar .navbar-nav a:link,
 .navbar .navbar-nav a:visited,
@@ -66,11 +66,29 @@
   border-radius: 3px;
 }
 .bullet {
+  list-style: none;
   text-align: left;
   font-family: 'Open Sans';
 }
 .bullet h2 {
   font-family: 'Lato';
+}
+.bullets--list {
+  border-radius: 3px;
+  padding: 0;
+  margin: 0;
+}
+.bullets--list .bullet--item {
+  padding: 0;
+  margin: 0;
+}
+.bullets--list .bullet--item:nth-child(odd) {
+  padding: 3px;
+  background-color: #9f9f9f;
+  color: #fff;
+}
+.bullets--list .bullet--item:nth-child(even) {
+  padding: 3px;
 }
 .choice {
   padding: 15px;
@@ -104,10 +122,6 @@ header {
   color: #fff;
   font-size: 3em;
   text-align: center;
-/*
-   * Note the use of the `main-color`
-   * variable and the `darken` function
-   */
   background-color: #4998f2;
   border-bottom: 1px solid #0f68ce;
   text-shadow: 0px -1px 0px #0f68ce;
@@ -163,7 +177,6 @@ header .message a {
   border: 1px solid #ccc;
   margin-left: 20px;
   background-color: #faf9f0;
-  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
   box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
 }
 .sidebar .widget h1 {

@@ -14,21 +14,25 @@ npm-install:
 	npm install
 
 client:
-	stylus -u nib views/styles/style.styl -o public/stylesheets/
-	#browserify --debug app/iancullinane.com.js -t babelify -o public/dist/include.js
+	stylus -u nib client/views/styles/style.styl -o server/public/dist/
+	#browserify --debug client/iancullinane.com.js -t babelify -o server/public/dist/include.js
 
 watch:
-	stylus -u nib -w views/styles/style.styl -o public/dist/style.css &
-	watchify --debug app/iancullinane.com.js -t babelify -t pugify -o public/dist/include.js -v -v --poll=1000 &
+	stylus -w client/views/styles/style.styl -o server/public/dist/ &
+	#watchify --debug client/iancullinane.com.js -t babelify -t pugify -o server/public/dist/include.js -v -v --poll=1000 &
 
 clean:
-	-rm -f public/js/include.js
-	-rm -f public/stylesheets/syle.css
+	-rm -f public/dist/include.js
+	-rm -f public/dist/syle.css
 
 build-npm:
 	browserify --debug -t jadeify views/ui.js -o public/js/include.js
 
-.PHONY: run build
+
+sync:
+	browser-sync start --proxy "iancullinane.io:3334" --serveStatic 'public' --files 'public/dist/style.css'
+
+.PHONY: run build client
 
 
 #

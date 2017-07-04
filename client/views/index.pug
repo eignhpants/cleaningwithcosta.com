@@ -1,0 +1,54 @@
+
+extends layout
+
+include mixins/body-mixins
+
+block body-content
+  include includes/header
+
+
+append body-content  
+  .container
+    .row
+      .bullet.col-md-4
+        h2 Residential
+        p One time or regular cleaning, competitive pricing and excellent service. We are full insured, professional cleaners.
+        .bullets--list
+          p.bullet--item One Time & Regular Cleaning
+          p.bullet--item Window Cleaning
+      .bullet.col-md-4
+        h2 Commerical
+        p Professional service for commercial facilities. We can handle a variety of spaces and business types.
+        .bullets--list
+          p.bullet--item Retail & Shopping
+          p.bullet--item One time or scheduled cleanup
+      .bullet.col-md-4
+        h2 Construction
+        p Clean up for projects underway or wrapping up. No job too small.
+        .bullets--list
+          p.bullet--item Pre or post cleanup
+          p.bullet--item In progress cleanup
+          p.bullet--item One time or scheduled clean up
+
+append body-content
+  .container
+    .row
+      .contact.col-md-12
+        .row
+          h2.col-md-12
+              | Call today for a free estimate
+          a(href="tel:781-781-8050").number.estimate-btn.btn.btn-default
+           | 857.251.5190
+
+append body-content     
+  .container      
+    .row
+      .main-content.col-md-12
+        h2 Hello, we are Kelly & Cinthia
+        p
+          include body.txt
+
+
+
+block footer
+  include includes/footer

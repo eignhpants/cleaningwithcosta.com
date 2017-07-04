@@ -1,29 +1,6 @@
 
+@import './global.styl'
 
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,300|Quicksand')
-@import url('https://fonts.googleapis.com/css?family=Lato:900|Open+Sans:400,300,300italic')
-
-@import 'nib'
-//@import 'mixins/strap'
-//@import 'bootstrap'
-
-
-
-$quicksand = 'Quicksand'
-open-sans = 'Open Sans'
-lato = 'Lato'
-
-small = 'screen and (max-width: 420px)'
-medium = 'screen and (min-width: 420px)'
-large = 'screen and (min-width: 992px)'
-xlarge = 'screen and (min-width: 1200px)'
-
-/*
- * Store the main color and
- * background color as variables
- */
-main-color = #4998F2
-background-color = #faf9f0
 
 
 //----------------------------------
@@ -37,6 +14,13 @@ background-color = #faf9f0
   border none
 
   .navbar-nav
+
+    li
+      &:hover
+        background-color: white
+        color: white
+
+
     a
       &:link
       &:visited
@@ -103,10 +87,33 @@ background-color = #faf9f0
   //text-shadow 0px -1px 0px darken(background-color, 30%)
 
 .bullet
+  list-style: none
   text-align left
   font-family open-sans
   h2
     font-family lato
+
+
+bullet-color = #4f4f4f
+
+.bullets--list
+  border-radius 3px
+  // border 1px solid bullet-color
+  padding 0
+  margin 0
+
+  .bullet--item
+    padding 0
+    margin 0
+
+    &:nth-child(odd)
+      padding 3px
+      background-color: #9f9f9f
+      color white
+
+    &:nth-child(even)
+      // border-top 1px solid bullet-color
+      padding 3px
 
 .choice
   padding 15px
@@ -151,7 +158,12 @@ header
   color #fff
   font-size 3em
   text-align center
+  background-color main-color
+  border-bottom 1px solid darken(main-color, 30%)
+  text-shadow 0px -1px 0px darken(main-color, 30%)
 
+
+  // The name and contact buttons
   .message
     text-align left
     @media medium
@@ -175,13 +187,6 @@ header
       font-family open-sans
       font-weight 300
 
-  /*
-   * Note the use of the `main-color`
-   * variable and the `darken` function
-   */
-  background-color main-color
-  border-bottom 1px solid darken(main-color, 30%)
-  text-shadow 0px -1px 0px darken(main-color, 30%)
 
 
 

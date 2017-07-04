@@ -12,8 +12,6 @@ RUN npm install
 ADD . /usr/src/app
 WORKDIR /usr/src/app
 
-# Install your application's dependencies
-
 # Expose the node.js port to the Docker host.
 EXPOSE 3334
 

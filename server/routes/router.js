@@ -1,6 +1,6 @@
 
 import express from 'express';
-import config from '../CONFIG';
+import config from '../../CONFIG';
 // the Router subclass to be exported
 var router = express.Router();
 
@@ -9,6 +9,13 @@ router.get('/', (req, res, next)=>{
   //console.log(res.statusCode);
   res.render('index');
 });
+
+
+router.get('/about', (req, res, next)=>{
+  //console.log(res.statusCode);
+  res.render('about');
+});
+
 
 
 router.use((req, res, next) => {
