@@ -41,22 +41,115 @@
   .btn-default
     border none
 
-.estimate-btn
+
+
+
+//   ______  __          __                __
+//  /      \|  \        |  \              |  \
+// |  $$$$$$| $$ ______ | $$____   ______ | $$
+// | $$ __\$| $$/      \| $$    \ |      \| $$
+// | $$|    | $|  $$$$$$| $$$$$$$\ \$$$$$$| $$
+// | $$ \$$$| $| $$  | $| $$  | $$/      $| $$
+// | $$__| $| $| $$__/ $| $$__/ $|  $$$$$$| $$
+//  \$$    $| $$\$$    $| $$    $$\$$    $| $$
+//   \$$$$$$ \$$ \$$$$$$ \$$$$$$$  \$$$$$$$\$$
+
+
+.btn--default
   position: relative
-  background-color main-color
+  background-color red-color
   color white
   font-size 20px
   text-align left
   border none
 
 
-.contact-btn
-  @extend .estimate-btn
-  left -13px
+.inverse
+  background-color red-color
+  color white
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+// __    __                         __
+// |  \  |  \                       |  \
+// | $$  | $$ ______   ______   ____| $$ ______   ______
+// | $$__| $$/      \ |      \ /      $$/      \ /      \
+// | $$    $|  $$$$$$\ \$$$$$$|  $$$$$$|  $$$$$$|  $$$$$$\
+// | $$$$$$$| $$    $$/      $| $$  | $| $$    $| $$   \$$
+// | $$  | $| $$$$$$$|  $$$$$$| $$__| $| $$$$$$$| $$
+// | $$  | $$\$$     \\$$    $$\$$    $$\$$     | $$
+ // \$$   \$$ \$$$$$$$ \$$$$$$$ \$$$$$$$ \$$$$$$$\$$
 
 
-  .glyphicon
-    top 3px
+.flex
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+
+.row
+  flex-direction: row
+  justify-content: space-between
+
+.row--btns
+  @extend .row
+
+
+
+
+
+
+//TODO change back vh
+header
+
+  //height 900px
+  width 100%
+  padding 50px 10px
+  color #fff
+  font-size 3em
+  text-align center
+  background-color white
+
+
+// The name and contact buttons
+.message
+  color red-color
+  text-align left
+  @media medium
+    h1
+      font-family lato
+      font-size 6vw
+    h2
+      font-size 3vw
+      font-family open-sans
+      font-weight 300
+  @media small
+    h1
+      font-family lato
+      font-size 14vw
+    h2
+      font-size 10vw
+      font-family open-sans
+      font-weight 300
+
+  a
+    margin: 0 10px
+    font-family open-sans
+    font-weight 300
+
+
+
+
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+
+
+
+
 
 //----------------------------------
 //    PROJECT CSS                  |
@@ -65,8 +158,8 @@
 .contact
   font-family 'Quicksand'
   font-size 3vw
-  background-color main-color
-  color background-color
+  background-color: white
+  color red-color
   border-radius 5px
   padding 8px
   text-align center
@@ -76,15 +169,6 @@
   h2
     margin 10px
     line-height 150%
-
-.number
-  font-family 'Quicksand'
-  background-color background-color
-  main-color main-color
-  color main-color
-  padding 5px
-  border-radius 3px
-  //text-shadow 0px -1px 0px darken(background-color, 30%)
 
 .bullet
   list-style: none
@@ -144,48 +228,11 @@ html
   background-color #424242
 
 body
+  color white
   font-family 'Open Sans'
   font-size 1.6em
-  background-color background-color
-  color #444
+  background-color red-color
 
-//TODO change back vh
-header
-
-  //height 900px
-  width 100%
-  padding 50px 10px
-  color #fff
-  font-size 3em
-  text-align center
-  background-color main-color
-  border-bottom 1px solid darken(main-color, 30%)
-  text-shadow 0px -1px 0px darken(main-color, 30%)
-
-
-  // The name and contact buttons
-  .message
-    text-align left
-    @media medium
-      h1
-        font-family lato
-        font-size 6vw
-      h2
-        font-size 3vw
-        font-family open-sans
-        font-weight 300
-    @media small
-      h1
-        font-family lato
-        font-size 14vw
-      h2
-        font-size 10vw
-        font-family open-sans
-        font-weight 300
-
-    a
-      font-family open-sans
-      font-weight 300
 
 
 

@@ -30,7 +30,7 @@ build-npm:
 
 
 sync:
-	browser-sync start --proxy "iancullinane.io:3334" --serveStatic 'public' --files 'public/dist/style.css'
+	browser-sync start --proxy "localhost:3334" --serveStatic 'public' --files 'server/public/dist/style.css, client/views/'
 
 .PHONY: run build client
 

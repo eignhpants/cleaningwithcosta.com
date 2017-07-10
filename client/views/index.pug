@@ -4,7 +4,22 @@ extends layout
 include mixins/body-mixins
 
 block body-content
-  include includes/header
+  header
+    .flex
+      .message
+        //img#logo(src="images/Costas-Cleaning.svg", alt="Costa's Cleaning")
+        include ./includes/logo_7-17_logo_no_text.svg
+        h1 Costa's Cleaning
+        h2 Residential & Commercial Cleaning
+      
+      .message
+        .row--btns
+          a(href="tel:781-781-8050").btn--default.btn.btn-default
+            span.glyphicon.glyphicon-phone
+            |  857.251.5190
+          a(href="mailto:kelly@costascleaning.com").btn--default.btn.btn-default
+            span.glyphicon.glyphicon-envelope
+            |  kc@cleaningwithcosta.com
 
 
 append body-content  
@@ -33,11 +48,11 @@ append body-content
 append body-content
   .container
     .row
-      .contact.col-md-12
+      .contact.inverse.col-md-12
         .row
           h2.col-md-12
               | Call today for a free estimate
-          a(href="tel:781-781-8050").number.estimate-btn.btn.btn-default
+          a(href="tel:781-781-8050").default--btn.btn.btn-default
            | 857.251.5190
 
 append body-content     
