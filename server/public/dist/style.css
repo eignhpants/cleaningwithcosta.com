@@ -27,54 +27,128 @@
 .btn-group .btn-default {
   border: none;
 }
-.estimate-btn,
-.contact-btn {
+.btn--default {
   position: relative;
-  background-color: #4998f2;
+  background-color: #ed174c;
   color: #fff;
   font-size: 20px;
   text-align: left;
   border: none;
 }
-.contact-btn {
-  left: -13px;
+.inverse {
+  background-color: #ed174c;
+  color: #fff;
 }
-.contact-btn .glyphicon {
-  top: 3px;
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.row,
+.row--btns,
+.row--bullets {
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (min-width: 420px) {
+  .row,
+  .row--btns,
+  .row--bullets {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 992px) {
+  .row,
+  .row--btns,
+  .row--bullets {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 420px) {
+  .row--btns {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  .row--btns {
+    flex-direction: row;
+  }
+}
+header {
+  padding: 50px;
+  color: #fff;
+  font-size: 3em;
+  text-align: center;
+  background-color: #fff;
+}
+.message {
+  color: #ed174c;
+  text-align: left;
+}
+@media screen and (min-width: 420px) {
+  .message h1 {
+    font-family: 'Lato';
+    font-size: 6vw;
+  }
+  .message h2 {
+    font-size: 3vw;
+    font-family: 'Open Sans';
+    font-weight: 300;
+  }
+}
+@media screen and (max-width: 420px) {
+  .message h1 {
+    font-family: 'Lato';
+    font-size: 14vw;
+  }
+  .message h2 {
+    font-size: 10vw;
+    font-family: 'Open Sans';
+    font-weight: 300;
+  }
+}
+.message a {
+  margin: 0 10px;
+  font-family: 'Open Sans';
+  font-weight: 300;
 }
 .contact {
+  margin-top: 25px;
   font-family: 'Quicksand';
   font-size: 3vw;
-  background-color: #4998f2;
-  color: #faf9f0;
+  background-color: #fff;
+  color: #ed174c;
   border-radius: 5px;
   padding: 8px;
   text-align: center;
   margin-bottom: 20px;
-  text-shadow: 0px -1px 0px #0f68ce;
 }
 .contact h2 {
   margin: 10px;
   line-height: 150%;
 }
-.number {
-  font-family: 'Quicksand';
-  background-color: #faf9f0;
-  main-color: #4998f2;
-  color: #4998f2;
-  padding: 5px;
-  border-radius: 3px;
+.row--bullets {
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 8px;
+}
+.van_image {
+  width: 100%;
 }
 .bullet {
+  flex: 1;
   list-style: none;
-  text-align: left;
   font-family: 'Open Sans';
+  margin: 10px;
 }
 .bullet h2 {
   font-family: 'Lato';
 }
 .bullets--list {
   border-radius: 3px;
+  width: 90%;
   padding: 0;
   margin: 0;
 }
@@ -84,21 +158,11 @@
 }
 .bullets--list .bullet--item:nth-child(odd) {
   padding: 3px;
-  background-color: #9f9f9f;
-  color: #fff;
+  background-color: #fff;
+  color: #ed174c;
 }
 .bullets--list .bullet--item:nth-child(even) {
   padding: 3px;
-}
-.choice {
-  padding: 15px;
-}
-.choice .h_image {
-  padding: 10px;
-}
-#logo {
-  color: #fff;
-  filter: drop-shadow(6px 0 2px rgba(0,0,0,0.2));
 }
 #search {
   text-align: center;
@@ -111,62 +175,26 @@ html {
   background-color: #424242;
 }
 body {
+  color: #fff;
   font-family: 'Open Sans';
   font-size: 1.6em;
-  background-color: #faf9f0;
-  color: #444;
+  background-color: #ed174c;
 }
-header {
-  width: 100%;
-  padding: 50px 10px;
-  color: #fff;
-  font-size: 3em;
-  text-align: center;
-  background-color: #4998f2;
-  border-bottom: 1px solid #0f68ce;
-  text-shadow: 0px -1px 0px #0f68ce;
-}
-header .message {
-  text-align: left;
-}
-@media screen and (min-width: 420px) {
-  header .message h1 {
-    font-family: 'Lato';
-    font-size: 6vw;
-  }
-  header .message h2 {
-    font-size: 3vw;
-    font-family: 'Open Sans';
-    font-weight: 300;
-  }
-}
-@media screen and (max-width: 420px) {
-  header .message h1 {
-    font-family: 'Lato';
-    font-size: 14vw;
-  }
-  header .message h2 {
-    font-size: 10vw;
-    font-family: 'Open Sans';
-    font-weight: 300;
-  }
-}
-header .message a {
-  font-family: 'Open Sans';
-  font-weight: 300;
-}
-.container {
-  width: 90%;
-  margin: 50px auto;
-  overflow: hidden;
-}
-.main-content {
+.introduction {
+  margin: 50px;
   float: left;
 }
-.main-content h2 {
+.introduction h2 {
+  text-shadow: 4px 4px 6px #333;
   font-family: 'Lato';
+  font-size: 4.2vw;
 }
-.main-content p {
+@media screen and (min-width: 420px) {
+  .introduction h2 {
+    font-size: 6vw;
+  }
+}
+.introduction p {
   margin-bottom: 20px;
 }
 .sidebar {

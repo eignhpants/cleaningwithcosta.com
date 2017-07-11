@@ -92,11 +92,15 @@
 .row
   flex-direction: row
   justify-content: space-between
+  @media medium
+    flex-direction: column
+  @media large
+    flex-direction: row
 
 .row--btns
   @extend .row
-
-
+  @media medium {flex-direction: row; }
+  @media large {flex-direction: row; }
 
 
 
@@ -105,8 +109,7 @@
 header
 
   //height 900px
-  width 100%
-  padding 50px 10px
+  padding 50px
   color #fff
   font-size 3em
   text-align center
@@ -146,16 +149,30 @@ header
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 
-
-
-
-
-
 //----------------------------------
 //    PROJECT CSS                  |
 //----------------------------------
 
+
+
+
+ // _______                 __
+// |       \               |  \
+// | $$$$$$$\ ______   ____| $$__    __
+// | $$__/ $$/      \ /      $|  \  |  \
+// | $$    $|  $$$$$$|  $$$$$$| $$  | $$
+// | $$$$$$$| $$  | $| $$  | $| $$  | $$
+// | $$__/ $| $$__/ $| $$__| $| $$__/ $$
+// | $$    $$\$$    $$\$$    $$\$$    $$
+ // \$$$$$$$  \$$$$$$  \$$$$$$$_\$$$$$$$
+//                            |  \__| $$
+//                             \$$    $$
+//                              \$$$$$$
+
+
+
 .contact
+  margin-top 25px
   font-family 'Quicksand'
   font-size 3vw
   background-color: white
@@ -164,25 +181,39 @@ header
   padding 8px
   text-align center
   margin-bottom 20px
-  text-shadow 0px -1px 0px darken(main-color, 30%)
 
   h2
     margin 10px
     line-height 150%
 
+
+
+.row--bullets
+  @extend .row
+  flex-flow: row wrap;
+  justify-content: space-around
+  align-items: flex-start
+  padding: 8px
+
+
+
+.van_image
+  width 100%
+
+
 .bullet
+  flex 1
   list-style: none
-  text-align left
   font-family open-sans
+  margin 10px;
   h2
     font-family lato
 
 
-bullet-color = #4f4f4f
 
 .bullets--list
   border-radius 3px
-  // border 1px solid bullet-color
+  width 90%
   padding 0
   margin 0
 
@@ -192,25 +223,11 @@ bullet-color = #4f4f4f
 
     &:nth-child(odd)
       padding 3px
-      background-color: #9f9f9f
-      color white
+      background-color: white
+      color red-color
 
     &:nth-child(even)
-      // border-top 1px solid bullet-color
       padding 3px
-
-.choice
-  padding 15px
-
-  .h_image
-    padding 10px
-
-#logo
-  color white
-  filter: drop-shadow( 6px 0 2px hsla(0, 0%, 0%, 0.2));
-  //text-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
-
-
 
 
 #search
@@ -235,17 +252,21 @@ body
 
 
 
-
-
-.container
-  width 90%
-  margin 50px auto
-  overflow hidden
-
-.main-content
+.introduction
+  margin 50px
   float left
   h2
+    text-shadow: 4px 4px 6px #333;
     font-family lato
+    font-size: 4.2vw
+
+    // @media medium
+    //   font-size: 10vw
+    // @media large
+    //   font-size: 5vw
+    @media medium
+      font-size: 6vw
+
   p
     margin-bottom 20px
 

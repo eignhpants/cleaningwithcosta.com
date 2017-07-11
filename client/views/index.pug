@@ -23,27 +23,28 @@ block body-content
 
 
 append body-content  
-  .container
-    .row
-      .bullet.col-md-4
-        h2 Residential
-        p One time or regular cleaning, competitive pricing and excellent service. We are full insured, professional cleaners.
-        .bullets--list
-          p.bullet--item One Time & Regular Cleaning
-          p.bullet--item Window Cleaning
-      .bullet.col-md-4
-        h2 Commerical
-        p Professional service for commercial facilities. We can handle a variety of spaces and business types.
-        .bullets--list
-          p.bullet--item Retail & Shopping
-          p.bullet--item One time or scheduled cleanup
-      .bullet.col-md-4
-        h2 Construction
-        p Clean up for projects underway or wrapping up. No job too small.
-        .bullets--list
-          p.bullet--item Pre or post cleanup
-          p.bullet--item In progress cleanup
-          p.bullet--item One time or scheduled clean up
+  .flex.row--bullets
+    .bullet
+      h2 Residential
+      p One time or regular cleaning, competitive pricing and excellent service. We are full insured, professional cleaners.
+      .bullets--list
+        p.bullet--item One Time & Regular Cleaning
+        p.bullet--item Window Cleaning
+    
+    .bullet
+      h2 Commerical
+      p Professional service for commercial facilities. We can handle a variety of spaces and business types.
+      .bullets--list
+        p.bullet--item Retail & Shopping
+        p.bullet--item One time or scheduled cleanup
+    
+    .bullet
+      h2 Construction
+      p Clean up for projects underway or wrapping up. No job too small.
+      .bullets--list
+        p.bullet--item Pre or post cleanup
+        p.bullet--item In progress cleanup
+        p.bullet--item One time or scheduled clean up
 
 append body-content
   .container
@@ -56,12 +57,12 @@ append body-content
            | 857.251.5190
 
 append body-content     
-  .container      
-    .row
-      .main-content.col-md-12
-        h2 Hello, we are Kelly & Cinthia
-        p
-          include body.txt
+  .flex
+    .introduction
+      h2 Hello, we are Kelly & Cinthia
+      img(class="van_image" src="/images/van_left.jpg")
+      p
+        include body.txt
 
 
 
